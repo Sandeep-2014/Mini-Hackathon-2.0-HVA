@@ -203,3 +203,24 @@ ol#options li:hover {
     font-weight: bold;
 }
 
+
+@media screen and (max-width: 810px) {
+    #gameScreen{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 780px){
+    #gameScreen h2{
+        font-size: 1.2rem;
+    }
+    #gameScreen p,  #gameScreen ul{
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #gameScreen{
+        width: 99%;
+    }
+}
