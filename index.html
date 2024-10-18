@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- home page -->
+    <div class="container">
+        <div class="sub-container">
+            <h1>Trivia Quiz Game</h1>
+            <form id="triviaForm">
+                <div class="input-group user">
+                    <label for="player1">Player 1 Name:</label>
+                    <input type="text" id="player1" required>
+                </div>
+                <div class="input-group user">
+                    <label for="player2">Player 2 Name:</label>
+                    <input type="text" id="player2" required>
+                </div>
+                <div class="input-group">
+                    <label for="category">Choose Quiz Category:</label>
+                    <select id="category" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="music">Music</option>
+                        <option value="sport_and_leisure">Sport and Leisure</option>
+                        <option value="film_and_tv">Film and TV</option>
+                        <option value="arts_and_literature">Arts and Literature</option>
+                        <option value="history">History</option>
+                        <option value="society_and_culture">Society and Culture</option>
+                        <option value="science">Science</option>
+                        <option value="geography">Geography</option>
+                        <option value="food_and_drink">Food and Drink</option>
+                        <option value="general_knowledge">General Knowledge</option>
+                    </select>
+                </div>
+                <button id="start" type="submit">Start Game</button>
+            </form>
+        </div>
+    </div>
+    <!-- Quiz Page -->
+    <div class="container1" style="display: none;">
+        <div id="gameScreen">
+            <h1 id="h1"></h1>
+            <h2 id="greeting"></h2>
+            <p id="chosenCategory"></p>
+            <h3 id="difficultyLevel"></h3>
+            <p id="playerName"></p>
+            <ul class="question-ul">
+                <li id="questionNo"></li>
+            </ul>
+            <ol id="options"></ol>
+            <div id="wrong"></div>
+            <div id="answerCheck"></div>
+            <div id="score">
+                <span id="player1Score"></span>
+                <span id="player2Score"></span>
+            </div>
+        </div>
+    </div>
+    <!-- Continue and Quit Page -->
+    <div class="container2" style="display: none;">
+        <div class="continueGame">
+            <h1>Trivia Quiz Game</h1>
+            <button id="continueGame"></button>
+            <button id="quitGame"></button>
+        </div>
+    </div>
+
+    <!-- page for choosing new catefory -->
+    <div class="container3" style="display: none;">
+        <form class="chooseNewCategory">
+            <div class="input-group">
+                <label for="newCategory">Choose New Quiz Category:</label>
+                <select id="newCategory" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="music">Music</option>
+                    <option value="sport_and_leisure">Sport and Leisure</option>
+                    <option value="film_and_tv">Film and TV</option>
+                    <option value="arts_and_literature">Arts and Literature</option>
+                    <option value="history">History</option>
+                    <option value="society_and_culture">Society and Culture</option>
+                    <option value="science">Science</option>
+                    <option value="geography">Geography</option>
+                    <option value="food_and_drink">Food and Drink</option>
+                    <option value="general_knowledge">General Knowledge</option>
+                </select>
+            </div>
+            <div class="error"></div>
+            <button id="startNewGame">Start New Game</button>
+        </form>
+    </div>
+    <!-- Final score page -->
+    <div class="container4" style="display: none;">
+        <div class="final">
+            <h1>Game Over!</h1>
+            <h3 class="final-score1">Player 1 Score: 0</h3>
+            <h3 class="final-score2">Player 2 Score: 0</h3>
+            <p id="winner"></p>
+            <button id="finalBtn"></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
